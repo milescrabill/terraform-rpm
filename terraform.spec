@@ -1,11 +1,11 @@
 Name:           terraform
-Version:        0.5.3
+Version:        0.7.13
 Release:        1%{?dist}
 Summary:        Terraform provides a common configuration to launch cloud-based infrastructure.
 Group:          Applications/System
 License:        MPLv2.0
 URL:            https://terraform.io/
-Source0:        https://dl.bintray.com/mitchellh/%{name}/%{name}_%{version}_linux_amd64.zip
+Source0:        https://releases.hashicorp.com/%{name}/%{version}/%{name}_%{version}_linux_amd64.zip
 BuildRoot:      %(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 
 %if 0%{?fedora} >= 14 || 0%{?rhel} >= 7
@@ -32,6 +32,8 @@ rm -rf %{buildroot}
 %doc
 
 %changelog
+* Fri Dec 02 2016 miles crabill <mcrabill@mozilla.com>
+- bump to v0.7.13
 * Mon May 11 2015 dan phrawzty <phrawzty@mozilla.com>
 - bump to v0.5.0
 * Wed May 06 2015 dan phrawzty <phrawzty@mozilla.com>
